@@ -61,21 +61,21 @@ tput cnorm
 fun_tst () {
 speedtest --share > speed
 }
-echo -e "\033[1;37m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "   \033[1;32mTESTANDO A VELOCIDADE DO SERVIDOR !\033[0m"
-echo -e "\033[1;37m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[1;37m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "   \033[1;32mTESTANDO  VELOCIDADE DO SERVIDOR !\033[0m"
+echo -e "\033[1;37m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 aguarde 'fun_tst'
 echo ""
 png=$(cat speed | sed -n '5 p' |awk -F : {'print $NF'})
 down=$(cat speed | sed -n '7 p' |awk -F :  {'print $NF'})
 upl=$(cat speed | sed -n '9 p' |awk -F :  {'print $NF'})
 lnk=$(cat speed | sed -n '10 p' |awk {'print $NF'})
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[1;32mPING (LATENCIA):\033[1;37m$png"
 echo -e "\033[1;32mDOWNLOAD:\033[1;37m$down"
 echo -e "\033[1;32mUPLOAD:\033[1;37m$upl"
 echo -e "\033[1;32mLINK: \033[1;36m$lnk\033[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 rm -rf $HOME/speed
 }
 #limiter
@@ -165,19 +165,19 @@ function onapp_ssh () {
 function autoexec () {
    if grep "menu;" /etc/profile > /dev/null; then
       clear
-      echo -e "\033[1;32mDESATIVANDO AUTO EXECUÇÃO\033[0m"
+      echo -e "\033[1;32mDESATIVANDO AUTO INICIO\033[0m"
       offautmenu () {
          sed -i '/menu;/d' /etc/profile
       }
       echo ""
       fun_bar 'offautmenu'
       echo ""
-      echo -e "\033[1;31mAUTO EXECUÇÃO DESATIVADO!\033[0m"
+      echo -e "\033[1;31mAUTO INICIO DESACTIVADO!\033[0m"
       sleep 1.5s
       menu2
    else
       clear
-      echo -e "\033[1;32mATIVANDO AUTO EXECUÇÃO\033[0m"
+      echo -e "\033[1;32mATIVANDO AUTO INICIO\033[0m"
       autmenu () {
          grep -v "^menu;" /etc/profile > /tmp/tmpass && mv /tmp/tmpass /etc/profile
          echo "menu;" >> /etc/profile
@@ -185,7 +185,7 @@ function autoexec () {
       echo ""
       fun_bar 'autmenu'
       echo ""
-      echo -e "\033[1;32mAUTO EXECUÇÃO ATIVADO!\033[0m"
+      echo -e "\033[1;32mAUTO INICIO ACTIVADO!\033[0m"
       sleep 1.5s
       menu2
    fi
@@ -228,30 +228,30 @@ swap1=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $2'})")
 swap2=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $4'})")
 swap3=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $3'})")
 clear
-echo -e "\033[1;31m╠════════════════════╦═══════════════════╦═══════════════════╣\033[0m"
-echo -e "\033[1;31m║  \033[1;32mSISTEMA           \033[1;31m║  \033[1;32mMEMÓRIA RAM      \033[1;31m║ \033[1;32m PROCESSADOR      \033[1;31m║"
-echo -e "\033[1;31m║  \033[1;36mOS: \033[1;37m$_system    \033[1;31m║  \033[1;36mTotal:\033[1;37m$_ram \033[1;31m║  \033[1;36mNucleos: \033[1;37m$_core\033[0m   \033[1;31m║"
-echo -e "\033[1;31m║  \033[1;36mmod: \033[1;37mdiegovip7🇦🇷    \033[1;31m║  \033[1;36mEn uso: \033[1;37m$_usor \033[1;31m║  \033[1;36mEn uso: \033[1;37m$_usop\033[0m    \033[1;31m║"
-echo -e "\033[1;31m╠════════════════════╬═══════════════════╬═══════════════════╣\033[0m"
+echo -e "\033[1;31m═══════════════════════════════════\033[0m"
+echo -e "\033[1;31m  \033[1;32mSISTEMA           \033[1;31m  \033[1;32mMEMÓRIA RAM      \033[1;31m \033[1;32m PROCESSADOR      \033[1;31m"
+echo -e "\033[1;31m  \033[1;36mOS: \033[1;37m$_system    \033[1;31m  \033[1;36mTotal:\033[1;37m$_ram \033[1;31m  \033[1;36mNucleos: \033[1;37m$_core\033[0m   \033[1;31m"
+echo -e "\033[1;31m  \033[1;36mmod: \033[1;37mdiegovip7🇦🇷    \033[1;31m  \033[1;36mEn uso: \033[1;37m$_usor \033[1;31m  \033[1;36mEn uso: \033[1;37m$_usop\033[0m    \033[1;31m"
+echo -e "\033[1;31m═══════════════════════════════════\033[0m"
 [[ ! -e /tmp/att ]]  && {
-    echo -e "\033[1;31m║  \033[1;32mOnlines:\033[1;37m $_onlin    \033[1;31m║  \033[1;32mExpirados: \033[1;37m$_userexp \033[1;31m║  \033[1;32mTotal: \033[1;37m$_tuser\033[0m     \033[1;31m║"
+    echo -e "\033[1;31m  \033[1;32mOnlines:\033[1;37m $_onlin    \033[1;31m  \033[1;32mExpirados: \033[1;37m$_userexp \033[1;31m  \033[1;32mTotal: \033[1;37m$_tuser\033[0m     \033[1;31m"
     var01='\033[1;37m•'
 } || {
-    echo -e "\033[1;31m║         \033[1;33m[\033[1;31m!\033[1;33m]  \033[1;32mEXISTE UNA ATUALIZACION DISPONIBLE  \033[1;33m[\033[1;31m!\033[1;33m]\033[0m        \033[1;31m║"
+    echo -e "\033[1;31m         \033[1;33m[\033[1;31m!\033[1;33m]  \033[1;32mEXISTE UNA ATUALIZACION DISPONIBLE  \033[1;33m[\033[1;31m!\033[1;33m]\033[0m        \033[1;31m"
     var01="\033[1;32m!"
 }
-echo -e "\033[1;31m╠════════════════════╩═══════════════════╩═══════════════════╣\033[0m"
-echo -e "\033[1;31m║  \033[1;32mMEMÓRIA SWAP    \033[1;36mTotal: \033[1;37m$swap1  \033[1;36mEn uso: \033[1;37m$swap3  \033[1;36mLibre: \033[1;37m$swap2 \033[1;31m║"
-echo -e "\033[1;31m╠════════════════════════════════════════════════════════════╣\033[0m"
-echo -e "\033[1;31m║   [\033[1;36m21\033[1;31m] \033[1;37m• \033[1;33mADICIONAR HOST \033[1;31m       [\033[1;36m28\033[1;31m] \033[1;37m• \033[1;33mEDITAR CONTRASEÑA ROOT \033[1;31m  \033[1;31m  ║
-\033[1;31m║   [\033[1;36m22\033[1;31m] \033[1;37m• \033[1;33mBORRAR HOST \033[1;31m         [\033[1;36m29\033[1;31m] \033[1;37m• \033[1;33mAUTO INICIO $autm \033[1;31m║
-\033[1;31m║   [\033[1;36m23\033[1;31m] \033[1;37m• \033[1;33mREINICIAR SISTEMA \033[1;31m    [\033[1;36m30\033[1;31m] $var01 \033[1;33mACTUALIZAR SCRIPT \033[1;31m  \033[1;31m  ║
-\033[1;31m║   [\033[1;36m24\033[1;31m] \033[1;37m• \033[1;33mREINICIAR SERVICOS \033[1;31m   [\033[1;36m31\033[1;31m] \033[1;37m• \033[1;33mBORRAR SCRIPT \033[1;31m  \033[1;31m    ║
-\033[1;31m║   [\033[1;36m25\033[1;31m] \033[1;37m• \033[1;33mBLOCK TORRENT $stsf\033[1;31m  [\033[1;36m32\033[1;31m] \033[1;37m• \033[1;33mTCPTWEAKER       \033[1;31m    \033[1;31m║
-\033[1;31m║   [\033[1;36m26\033[1;31m] \033[1;37m• \033[1;33mBOT TELEGRAM $stsbot\033[1;31m   [\033[1;36m33\033[1;31m] \033[1;37m• \033[1;33mVOLTAR \033[1;32m<\033[1;33m<\033[1;31m< \033[1;31m  \033[1;31m        ║
-\033[1;31m║   [\033[1;36m27\033[1;31m] \033[1;37m• \033[1;33mBOT TESTE $stsbotteste\033[1;31m      [\033[1;36m00\033[1;31m] \033[1;37m• \033[1;33mSALIR \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m  \033[1;31m           ║"
-echo -e "\033[1;31m╠════════════════════════════════════════════════════════════╝\033[0m"
-echo -ne "\033[1;31m╚╣\033[1;32m INFORME UNA OPCION \033[1;33m:"; read x
+echo -e "\033[1;31m══════════════════════════════════\033[0m"
+echo -e "\033[1;31m  \033[1;32mMEMÓRIA SWAP    \033[1;36mT: \033[1;37m$swap1  \033[1;36mEn uso: \033[1;37m$swap3  \033[1;36mLibre: \033[1;37m$swap2 \033[1;31m"
+echo -e "\033[1;31m══════════════════════════════════\033[0m"
+echo -e "\033[1;31m  [\033[1;36m21\033[1;31m] \033[1;37m \033[1;33mADICIONAR HOST \033[1;31m  [\033[1;36m28\033[1;31m] \033[1;37m \033[1;33mEDITAR CONTRASEÑA ROOT \033[1;31m  \033[1;31m  
+\033[1;31m [\033[1;36m22\033[1;31m] \033[1;37m \033[1;33mBORRAR HOST \033[1;31m      [\033[1;36m29\033[1;31m] \033[1;37m \033[1;33mAUTO INICIO $autm \033[1;31m
+\033[1;31m  [\033[1;36m23\033[1;31m] \033[1;37m \033[1;33mREINICIAR SISTEMA \033[1;31m   [\033[1;36m30\033[1;31m] $var01 \033[1;33mACTUALIZAR SCRIPT \033[1;31m  \033[1;31m
+\033[1;31m  [\033[1;36m24\033[1;31m] \033[1;37m \033[1;33mREINICIAR SERVICOS \033[1;31m  [\033[1;36m31\033[1;31m] \033[1;37m \033[1;33mBORRAR SCRIPT \033[1;31m  \033[1;31m 
+\033[1;31m   [\033[1;36m25\033[1;31m] \033[1;37m \033[1;33mBLOCK TORRENT $stsf\033[1;31m [\033[1;36m32\033[1;31m] \033[1;37m \033[1;33mTCPTWEAKER  \033[1;31m  \033[1;31m
+\033[1;31m   [\033[1;36m26\033[1;31m] \033[1;37m \033[1;33mBOT TELEGRAM $stsbot\033[1;31m  [\033[1;36m33\033[1;31m] \033[1;37m \e[1;33mVOLVER \e[1;31m
+\e[1;31m  [\e[1;36m27\e[1;31m] \033[1;37m \033[1;33mBOT TESTE $stsbotteste\033[1;31m    [\033[1;36m00\033[1;31m] \033[1;37m \033[1;33mSALIR \033[1;31m  "
+echo -e "\033[1;31m════════════════════════════════\033[0m"
+echo -ne "\033[1;31m\033[1;32m INFORME UNA OPCION \033[1;33m:"; read x
 case "$x" in
    21)
    clear
@@ -350,35 +350,35 @@ swap1=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $2'})")
 swap2=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $4'})")
 swap3=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $3'})")
 clear
-echo -e "\033[╠════════════════════╦═══════════════════╦═══════════════════╣\033[0m"
-echo -e "\033[1;31m║  \033[1;32mSISTEMA           \033[1;31m║  \033[1;32mMEMÓRIA RAM      \033[1;31m║ \033[1;32m PROCESSADOR      \033[1;31m║"
-echo -e "\033[1;31m║  \033[1;36mOS: \033[1;37m$_system    \033[1;31m║  \033[1;36mTotal:\033[1;37m$_ram \033[1;31m║  \033[1;36mNucleos: \033[1;37m$_core\033[0m   \033[1;31m║"
-echo -e "\033[1;31m║  \033[1;36mPais: \033[1;37mAR🇦🇷    \033[1;31m║  \033[1;36mEn uso: \033[1;37m$_usor \033[1;31m║  \033[1;36mEn uso: \033[1;37m$_usop\033[0m    \033[1;31m║"
-echo -e "\033[1;31m╠════════════════════╬═══════════════════╬═══════════════════╣\033[0m"
-echo -e "\033[1;31m║  \033[1;32mOnlines:\033[1;37m $_onlin    \033[1;31m║  \033[1;32mExpirados: \033[1;37m$_userexp \033[1;31m║  \033[1;32mTotal: \033[1;37m$_tuser     \033[1;31m║"
-echo -e "\033[1;31m╠════════════════════╩═══════════════════╩═══════════════════╣\033[0m"
-echo -e "\033[1;31m║  \033[1;32mMEMÓRIA SWAP    \033[1;36mTotal: \033[1;37m$swap1  \033[1;36mEn uso: \033[1;37m$swap3  \033[1;36mLivre: \033[1;37m$swap2 \033[1;31m║"
-echo -e "\033[1;31m╠════════════════════════════════════════════════════════════╣\033[0m"
-echo -e "\033[1;31m║   \033[1;31m[\033[1;36m01\033[1;31m] \033[1;37m• \033[1;33mCREAR USUARIO \033[1;31m            [\033[1;36m12\033[1;31m] \033[1;37m• \033[1;33mSPEEDTEST  \033[1;31m      ║
-\033[1;31m║   [\033[1;36m02\033[1;31m] \033[1;37m• \033[1;33mCREAR TESTE         \033[1;31m      [\033[1;36m13\033[1;31m] \033[1;37m• \033[1;33mBANNER  \033[1;31m         ║ 
-\033[1;31m║   [\033[1;36m03\033[1;31m] \033[1;37m\033[1;37m• \033[1;33mBORRAR USUARIO \033[1;31m          [\033[1;36m14\033[1;31m] \033[1;37m• \033[1;33mTRAFEGO  \033[1;31m        ║
-\033[1;31m║   [\033[1;36m04\033[1;31m] \033[1;37m• \033[1;33mMONITOR ONLINE \033[1;31m           [\033[1;36m15\033[1;31m] \033[1;37m• \033[1;33mOPTIMIZAR  \033[1;31m       ║
-\033[1;31m║   [\033[1;36m05\033[1;31m] \033[1;37m• \033[1;33mEDITAR DATA \033[1;31m               [\033[1;36m16\033[1;31m] \033[1;37m• \033[1;33mBACKUP  \033[1;31m         ║
-\033[1;31m║   [\033[1;36m06\033[1;31m] \033[1;37m• \033[1;33mEDITAR LIMITE \033[1;31m           [\033[1;36m17\033[1;31m] \033[1;37m• \033[1;33mHERRAMIENTAS     \033[1;31m ║
-\033[1;31m║   [\033[1;36m07\033[1;31m] \033[1;37m• \033[1;33mEDITAR CONTRASEÑA \033[1;31m              [\033[1;36m18\033[1;31m] \033[1;37m• \033[1;33mLIMITER $stsl \033[1;31m  ║
-\033[1;31m║   [\033[1;36m08\033[1;31m] \033[1;37m• \033[1;33mBORRAR EXPIRADOS \033[1;31m        [\033[1;36m19\033[1;31m] \033[1;37m• \033[1;33mMenu BadVpn$stsu\033[1;31m║
-\033[1;31m║   [\033[1;36m09\033[1;31m] \033[1;37m• \033[1;33mINFO DE USUARIOS \033[1;31m    [\033[1;36m20\033[1;31m] \033[1;37m• \033[1;33mFIREWALL (PRO)  \033[1;31m ║
-\033[1;31m║   [\033[1;36m10\033[1;31m] \033[1;37m• \033[1;33mMENU INSTALADOR \033[1;31m          [\033[1;36m21\033[1;31m] \033[1;37m• \033[1;33mINFO VPS \033[1;31m>\033[1;33m>\033[1;32m>\033[0m \033[1;31m    ║
-\033[1;31m║   [\033[1;36m11\033[1;31m] \033[1;37m• \033[1;33mCREAR MEMORIA SWAP \033[1;31m       [\033[1;36m22\033[1;31m] \033[1;37m• \033[1;33mCHECKUSER 4G  \033[1;31m   ║
-\033[1;31m║   [\033[1;36m G \033[1;31m] \033[1;37m• \033[1;33mCHECKUSER GLTUNNEL \033[1;31m      [\033[1;36m23\033[1;31m] \033[1;37m• \033[1;33mMAIS \033[1;31m>\033[1;33m>\033[1;32m>\033[0m \033[1;31m        ║"
-echo -e "\033[1;31m╠════════════════════════════════════════════════════════════╝\033[0m"
-echo -ne "\033[1;31m╚╣\033[1;32m INFORME UNA OPCION \033[1;33m:"; read x
+echo -e "\033[════════════════════════════════════\033[0m"
+echo -e "\033[1;31m  \033[1;32mSISTEMA       \033[1;31m  \033[1;32mMEMÓRIA RAM    \033[1;31m \033[1;32m PROCESSADOR      \033[1;31m"
+echo -e "\033[1;31m \033[1;36mOS:\033[1;37m$_system  \033[1;31m  \033[1;36mTotal:\033[1;37m$_ram \033[1;31m  \033[1;36mNucleos: \033[1;37m$_core\033[0m   \033[1;31m"
+echo -e "\033[1;31m  \033[1;36mPais: \033[1;37mAR🇦🇷  \033[1;31m  \033[1;36mEn uso:\033[1;37m$_usor\033[1;31m \033[1;36mEn uso: \033[1;37m$_usop\033[0m   \033[1;31m"
+echo -e "\033[1;31m═════════════════════════════════════\033[0m"
+echo -e "\033[1;31m \033[1;32mOnlines:\033[1;37m$_onlin \033[1;31m  \033[1;32mExpirados: \033[1;37m$_userexp \033[1;31m  \033[1;32mTotal: \033[1;37m$_tuser \033[1;31m"
+echo -e "\033[1;31m═══════════════════════════════════════\033[0m"
+echo -e "\033[1;31m \033[1;32mMemoria\033[1;36m Swap:\033[1;37m$swap1 \033[1;36mEn uso:\033[1;37m $swap3 \033[1;36mLibre: \033[1;37m $swap2 \033[1;31m"
+echo -e "\033[1;31m══════════════════════════════════════\033[0m"
+echo -e "\033[1;31m  \e[1;31m[\e[1;36m01\e[1;31m] \e[1;37m \e[1;33mCREAR USUARIO \e[1;31m         [\e[1;36m12\e[1;31m] \e[1;37m \e[1;33mSPEEDTEST  \e[1;31m     
+\e[1;31m  [\e[1;36m02\e[1;31m] \e[1;37m \e[1;33mCREAR TESTE       \e[1;31m      [\e[1;36m13\e[1;31m] \e[1;37m \e[1;33mBANNER  \e[1;31m         
+\e[1;31m  [\e[1;36m03\e[1;31m] \e[1;37m\e[1;37m \e[1;33mBORRAR USUARIO \e[1;31m         [\e[1;36m14\e[1;31m] \e[1;37m \e[1;33mTRAFEGO  \e[1;31m       
+\e[1;31m  [\e[1;36m04\e[1;31m] \e[1;37m \e[1;33mMONITOR ONLINE \e[1;31m         [\e[1;36m15\e[1;31m] \e[1;37m \e[1;33mOPTIMIZAR  \e[1;31m      
+\e[1;31m   [\e[1;36m05\e[1;31m] \e[1;37m \e[1;33mEDITAR FECHA \e[1;31m          [\e[1;36m16\e[1;31m] \e[1;37m \e[1;33mBACKUP  \e[1;31m        
+\e[1;31m   [\e[1;36m06\e[1;31m] \e[1;37m \e[1;33mEDITAR LIMITE \e[1;31m         [\e[1;36m17\e[1;31m] \e[1;37m \e[1;33mHERRAMIENTAS   \e[1;31m 
+\e[1;31m  [\e[1;36m07\e[1;31m] \e[1;37m \e[1;33mEDITAR CONTRASEÑA \e[1;31m     [\e[1;36m18\e[1;31m] \e[1;37m \e[1;33mLIMITER $stsl \e[1;31m 
+\e[1;31m  [\e[1;36m08\e[1;31m] \e[1;37m \e[1;33mBORRAR EXPIRADOS \e[1;31m     [\e[1;36m19\e[1;31m] \e[1;37m \e[1;33mMenu BadVpn $stsu\e[1;31m
+\e[1;31m  [\e[1;36m09\e[1;31m] \e[1;37m \e[1;33mINFO DE USUARIOS \e[1;31m      [\e[1;36m20\e[1;31m] \e[1;37m \e[1;33mFIREWALL (PRO)  \e[1;31m
+\e[1;31m  [\e[1;36m10\e[1;31m] \e[1;37m \e[1;33mMENU INSTALADOR \e[1;31m       [\e[1;36m21\e[1;31m] \e[1;37m \e[1;33mINFO VPS \e[0m \e[1;31m   
+\e[1;31m  [\e[1;36m11\e[1;31m] \e[1;37m \e[1;33mCREAR MEMORIA SWAP \e[1;31m    [\e[1;36m22\e[1;31m] \e[1;37m \e[1;33mCHECKUSER 4G  \e[1;31m   
+\e[1;31m  [\e[1;36mG \e[1;31m]\e[1;37m \e[1;33mCHECKUSER GLTUNNEL \e[1;31m      [\e[1;36m23\e[1;31m] \e[1;37m \e[1;33m M A S \e[0m \e[1;31m        "
+echo -e "\e[1;31m═══════════════════════════════════\e[0m"
+echo -ne "\e[1;31m\e[1;32m ....INFORME UNA OPCION \e[1;33m:"; read x
 
 case "$x" in 
    1 | 01)
    clear
    criarusuario
-   echo -ne "\n\033[1;31mENTER \033[1;33mpara retornar al \033[1;32mMENU!\033[0m"; read
+   echo -ne "\n\e[1;31mENTER \e[1;33mpara retornar al \e[1;32mMENU!\e[0m"; read
    ;;
    2 | 02)
    clear
