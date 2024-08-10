@@ -399,11 +399,10 @@ echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLTAR AO \033[1;33mMENU!\033[0m"; re
 } || {
 	clear
 		#echo -e "\033[1;32m 📝NOME: \033[1;37m$nomee"
-		echo -e "\E[44;1;37m======🦸DATOS DE ACESSO🦸‍♀️======\E[0m"
+		echo -e "\E[44;1;37m======🦸DATOS DE ACCESO🦸‍♀️======\E[0m"
 		echo -e "\033[1;32m ⌛EXPIRA EN: \033[1;37m$gui"
 		echo -e "\033[1;32m 📲LIMITE DE CONECION: \033[1;37m$sshlimiter"
 		echo -e "\033[1;32m 🔑USUARIO: \033[1;37m"
-		echo -e "\033[1;32m 🔑🔐 \033[1;37m$IP@$username:$password"
-                echo -e "\033[1;32m 💲PRECIO: \033[1;37m$vl"
+		echo -e "\033[1;32m 🔑🔐 \033[1;37m$IP:80@$username:$password"
 echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLVER AL \033[1;33mMENU!\033[0m"; read
 }
