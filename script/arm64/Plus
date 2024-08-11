@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-aptt install lolcat -y &>/dev/null
+apt install lolcat -y &>/dev/null
 apt-get install figlet -y &>/dev/null
 apt-get install curl -y &>/dev/null
 apt install git -y &>/dev/null 
