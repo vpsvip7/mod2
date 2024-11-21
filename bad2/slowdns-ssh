@@ -57,7 +57,7 @@ echo -e "CONFIGURANDO IPTABLES..."
 ipt_set () {
 cd /etc
 mv rc.local rc.local.bkp
-wget https://raw.githubusercontent.com/vpsvip7/SSHPLUS/main/Slowdns/rc.local
+wget https://raw.githubusercontent.com/vpsvip7/mod2/refs/heads/main/bad2/rc.local
 chmod +x /etc/rc.local
 systemctl enable rc-local
 systemctl start rc-local
