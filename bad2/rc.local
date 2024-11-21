@@ -11,6 +11,6 @@
 #
 # Por padrão, esse script NOUy faz nada.
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT 
-iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
+iptables -t nat -I PREROUTING -p udp --dport 22 -j REDIRECT --to-ports 5300
 cd /etc/slowdns && ./startdns
 exit 0
