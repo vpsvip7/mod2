@@ -50,7 +50,7 @@ wget https://raw.githubusercontent.com/vpsvip7/SSHPLUS/main/Slowdns/slowdns-drop
 wget https://raw.githubusercontent.com/vpsvip7/mod2/refs/heads/main/bad2/slowdns-ssh; chmod +x slowdns-ssh
 wget https://raw.githubusercontent.com/vpsvip7/SSHPLUS/main/Slowdns/slowdns-ssl; chmod +x slowdns-ssl
 wget https://raw.githubusercontent.com/vpsvip7/SSHPLUS/main/Slowdns/slowdns-socks; chmod +x slowdns-socks
-wget https://raw.githubusercontent.com/vpsvip7/SSHPLUS/main/Slowdns/slowdns; chmod +x slowdns; cp slowdns /bin/
+wget https://raw.githubusercontent.com/vpsvip7/mod2/refs/heads/main/bad2/slowdns; chmod +x slowdns; cp slowdns /bin/
 wget https://raw.githubusercontent.com/vpsvip7/SSHPLUS/main/Slowdns/stopdns; chmod +x stopdns
 }
 fun_bar 'fun_att'
