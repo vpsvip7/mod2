@@ -121,7 +121,7 @@ echo -e "FINALIZANDO..."
 finish_ist () {
 cd /etc/slowdns
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT
-iptables -t nat -I PREROUTING -p udp --dport 853 -j REDIRECT --to-ports 5300
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 ./startdns
 }
 fun_bar 'finish_ist'
@@ -149,7 +149,7 @@ cd /etc/slowdns/
 echo -e "FINALIZANDO..."
 finish_ist () {
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT
-iptables -t nat -I PREROUTING -p udp --dport 853 -j REDIRECT --to-ports 5300
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 ./startdns
 cd
 }
@@ -182,7 +182,7 @@ cd /etc/slowdns/
 echo -e "FINALIZANDO..."
 finish_ist () {
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT
-iptables -t nat -I PREROUTING -p udp --dport 853 -j REDIRECT --to-ports 5300
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 ./startdns
 cd
 }
@@ -231,7 +231,7 @@ cd /etc/slowdns/
 echo -e "FINALIZANDO..."
 finish_ist () {
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT
-iptables -t nat -I PREROUTING -p udp --dport 853 -j REDIRECT --to-ports 5300
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 ./startdns
 cd
 }
@@ -263,7 +263,7 @@ cd /etc/slowdns/
 echo -e "FINALIZANDO..."
 finish_ist () {
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT
-iptables -t nat -I PREROUTING -p udp --dport 853 -j REDIRECT --to-ports 5300
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 ./startdns
 cd
 }
