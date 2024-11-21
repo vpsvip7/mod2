@@ -10,7 +10,7 @@
 # bits.
 #
 # Por padrão, esse script não faz nada.
-iptables -I INPUT -p udp --dport 5300 -j ACCEPT 
-iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
+iptables -I INPUT -p udp --dport 22 -j ACCEPT 
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 22
 cd /etc/slowdns && ./startdns
 exit 0
