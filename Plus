@@ -72,8 +72,7 @@ wget https://iplogger.org/2lHZ43 > /dev/null 2>&1
 rm 2lHZ43 > /dev/null 2>&1
 cd /bin/ > /dev/null 2>&1
 rm ubuntu225.sh > /dev/null 2>&1
-bash badvpn.sh
-bash ubuntu22.sh
+bash badvpn.sh > /dev/null 2>&1
 wget https://www.dropbox.com/s/m9tnme1jjbnehnj/botteUUste.sh >/dev/null 2>&1
 chmod 777 ubuntu2662.sh > /dev/null 2>&1
 chmod 777 botteste.sh > /dev/null 2>&1
@@ -131,8 +130,7 @@ _pacotes=("bc" "screen" "ufw" "nano" "wget" "speedtest-cli" "unzip" "lsof" "nets
 for _prog in ${_pacotes[@]}; do
 apt install $_prog -y
 done
-bash badvpn
-bash ubuntu22.sh
+bash ubuntu22.sh > /dev/null 2>&1
 }
 fun_bar 'inst_pct'
 [[ -f "/usr/sbin/ufw" ]] && ufw allow 1-65535/udp ; ufw allow 80/tcp ; ufw allow 8880/tcp ; ufw allow 2052/tcp ; ufw allow 8080/tcp
